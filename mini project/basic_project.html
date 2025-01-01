@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Booking Website</title>
+    <link rel="stylesheet" href="bp.css">
+   
+    <!-- Link to external CSS file -->
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">
+                    <img src="aw logo.png" alt="Adventure Awaits Logo" class="logo-img"> Adventure Awaits
+                </a>
+            </div>
+            
+            <ul class="nav-links ">
+                <li><a href="http://127.0.0.1:5500/basic_project.html">Home</a></li>
+                <li><a href="https://www.google.co.in/maps">
+                    <img src="location.png" alt="map Icon" class="nav-icon"> map
+                </a></li>
+                <li>
+                    <a href="https://www.agoda.com">
+                        <img src="icon.png" alt="Hotel Icon" class="nav-icon"> Hotels
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.skyscanner.co.in">
+                        <img src="flight.png" alt="Flight Icon" class="nav-icon"> Flights
+                    </a>
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:5500/expense_tracker.html">
+                        <img src="expense.png" alt="expense Icon" class="nav-icon"> Expense Tracker
+                    </a>
+                </li>
+                <li><a href="http://127.0.0.1:5500/contact.html#">
+                    <img src="contact.png" alt="contact Icon" class="nav-icon">Contact Us
+                </a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button id="register-btn"><a href="http://127.0.0.1:5500/registration.html">Register</a></button>
+                <button id="signin-btn"><a href="http://127.0.0.1:5500/signim.html">Sign in</a> </button>
+            </div>
+        </nav>
+    </header>
+    
+   
+    
+
+    <!-- Modals for Register and Sign In -->
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('register-modal')">&times;</span>
+            <h2>Register</h2>
+            <p>This is a placeholder for the registration form.</p>
+        </div>
+    </div>
+
+    <div id="signin-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('signin-modal')">&times;</span>
+            <h2>Sign In</h2>
+            <p>This is a placeholder for the sign-in form.</p>
+        </div>
+    </div>
+
+
+    <!-- Search Section -->
+    <section class="search-section">
+        <div class="search-container">
+            <h1>Find the Best Deals on Travel</h1>
+
+           
+
+            
+            <form action="#">
+                <div class="form-row">
+                    <label for="destination">Destination</label>
+                    <input type="text" id="destination" name="destination" placeholder="Where do you want to go?">
+                </div>
+                <div class="form-row">
+                    <label for="checkin">Check-in Date</label>
+                    <input type="date" id="checkin" name="checkin">
+                </div>
+                <div class="form-row">
+                    <label for="checkout">Check-out Date</label>
+                    <input type="date" id="checkout" name="checkout">
+                </div>
+                <div class="form-row">
+                    <label for="guests">Guests</label>
+                    <select id="guests" name="guests">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+                </div>
+                <div class="filter-container">
+                    <label for="filter">Filter by:</label>
+                    <select id="filter" onchange="filterDestinations()">
+                        <option value="all">All Destinations</option>
+                        <option value="beach">Beach</option>
+                        <option value="mountains">Mountains</option>
+                        <option value="lakes">Lakes</option>
+                        <option value="jungle">Jungle</option>
+                    </select>
+                </div>
+                <div class="destination-container">
+                    <div class="destination beach">
+                        <a href="https://www.holidify.com/places/goa/anjuna-beach-sightseeing-1837.html">Anjuna Beach</a>
+                    </div>
+                    <div class="destination mountains">
+                        <a href="https://www.holidify.com/hotel/vibhasa-dhaulagiri-26778.html">Dhaulagiri</a>
+                    </div>
+                    <div class="destination lakes">
+                        <a href="https://www.holidify.com/places/srinagar/wular-lake-sightseeing-3662.html">Wular Lake</a>
+                    </div>
+                    <div class="destination jungle">
+                        <a href="https://www.holidify.com/places/sundarban-national-park/">Sundarbans</a>
+                    </div>
+                    <div class="destination beach">
+                        <a href="https://www.holidify.com/places/lakshadweep-islands/">Lakshadweep Beach</a>
+                    </div>
+                    <div class="destination mountains">
+                        <a href="https://www.holidify.com/places/kedarnath/">Kedarnath</a>
+                    </div>
+                    <div class="destination lakes">
+                        <a href="https://www.holidify.com/places/imphal/loktak-lake-sightseeing-2085.html">Loktak Lake</a>
+                    </div>
+                    <div class="destination jungle">
+                        <a href="https://www.gujarattourism.com/saurashtra/gir-somnath/gir-national-park.html">Gir forest</a>
+                    </div>
+                    <div class="destination beach">
+                        <a href="https://www.holidify.com/places/goa/palolem-beach-sightseeing-1860.html">Palolem Beach</a>
+                    </div>
+                    <div class="destination mountains">
+                        <a href="https://www.holidify.com/places/auli/trishul-peak-sightseeing-1224.html">Trisul</a>
+                    </div>
+                    <div class="destination lakes">
+                        <a href="https://www.holidify.com/places/gurgaon/damdama-lake-sightseeing-1912.html">Damdama Lake</a>
+                    </div>
+                    <div class="destination jungle">
+                        <a href="https://www.holidify.com/places/kasargod/kammadam-sacred-grove-wildlife-sanctuary-sightseeing-4920.html">Sacred Grove</a>
+                    </div>
+                    <div class="destination beach">
+                        <a href="https://www.holidify.com/places/goa/baga-beach-sightseeing-6226.html">Baga Beach</a>
+                    </div>
+                    <div class="destination mountains">
+                        <a href="mountains4.html">Himalayas</a>
+                    </div>
+                    <div class="destination lakes">
+                        <a href="https://www.holidify.com/places/srinagar/dal-lake-sightseeing-3648.html">Dal Lake</a>
+                    </div>
+                    <div class="destination jungle">
+                        <a href="https://www.holidify.com/places/corbett-national-park/">Jim Corbett National Park</a>
+                    </div>
+                </div>
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </section>
+   
+    
+ 
+
+    <!-- Featured Destinations Section -->
+    <section class="featured-destinations">
+        <h2>Popular Destinations</h2>
+        <div class="destinations-grid">
+            <div class="destination-card" onclick="showPopup('Paris', '$500', 'https://i0.wp.com/landlopers.com/wp-content/uploads/2018/04/Taj-Mahal-India.jpg?fit=1854%2C1512&ssl=1')">
+                <a href="https://www.getyourguide.com/-l4856/?cmp=bing&cmp=bing&ad_id=78202969349394&adgroup_id=1251244880305528&bid_match_type=bb&campaign_id=710112267&device=c&feed_item_id=&keyword=taj%20mahal%20in%20india%20tour&loc_interest_ms=149841&loc_physical_ms=157422&match_type=b&msclkid=cedfe5dd22b912966b2782c00d104fde&network=o&partner_id=CD951&target_id=kwd-78203215231726:aud-806259112&utm_adgroup=lc%3D4856%3Ataj%20mahal%7Cfn%3Df5%7Cci%3D942%3Atour&utm_campaign=dc%3D55%3Ain%7Clc%3D4856%3Ataj%20mahal%7Cct%3Dcore%7Cln%3D29%3Aen%7Ctc%3Dall&utm_keyword=taj%20mahal%20in%20india%20tour&utm_medium=paid_search&utm_query=taj%20mahal&utm_source=bing"
+                    style="display: block;">
+                    <img src="https://i0.wp.com/landlopers.com/wp-content/uploads/2018/04/Taj-Mahal-India.jpg?fit=1854%2C1512&ssl=1" alt="Destination 1">
+                </a>
+                <h3>Taj Mahal</h3>
+                <p>Location: Agra,UP</p>
+            </div>
+            <div class="destination-card" onclick="showPopup('New York', '$400', 'https://th.bing.com/th/id/OIP.YpEFnv99mGwOIy_pWVy-DgHaED?w=314&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7')">
+                <a href="https://delhitourism.travel/red-fort-lal-kila-delhi" style="display: block;">
+                    <img src="https://th.bing.com/th/id/OIP.YpEFnv99mGwOIy_pWVy-DgHaED?w=314&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Destination 2">
+                </a>
+                <h3>Red Fort</h3>
+                <p>Location: Delhi</p>
+            </div>
+            <div class="destination-card" onclick="showPopup('Tokyo', '$600', 'varanasi ghat.jpg')">
+                <a href="https://www.kayak.co.in/Varanasi-Hotels.49788.hotel.ksp?sck=SEM&skipapp=true" style="display: block;">
+                    <img src="varanasi ghat.jpg" alt="Destination 3">
+                </a>
+                <h3>Ghats</h3>
+                <p>Location: Varanasi,UP</p>
+            </div>
+            <div class="destination-card" onclick="showPopup('London', '$450', 'goa.jpg')">
+                <a href="https://www.tripadvisor.in/Attraction_Review-g306993-d605784-Reviews-Anjuna_Beach-Bardez_North_Goa_District_Goa.html" style="display: block;">
+                    <img src="goa.jpg" alt="Destination 4">
+                </a>
+                <h3>Anjuna Beach</h3>
+                <p>Location: Goa</p>
+            </div>
+            <div class="destination-card" onclick="showPopup('London', '$450', 'goa.jpg')">
+                <a href="https://www.tripadvisor.in/Attractions-g297679-Activities-Ooty_Udhagamandalam_The_Nilgiris_District_Tamil_Nadu.html" style="display: block;">
+                    <img src="ooty.jpg" alt="Destination 4">
+                </a>
+                <h3>Ooty</h3>
+                <p>Location: Tamilnadu</p>
+            </div>
+            <div class="destination-card" onclick="showPopup('London', '$450', 'goa.jpg')">
+                <a href="https://www.hawa-mahal.com/" style="display: block;">
+                <img src="hawa mahal.jpg" alt="Destination 4">
+                </a>
+                <h3>Hawa Mahal</h3>
+                <p>Location: Jaipur</p>
+            </div>
+            <div class="destination-card" onclick="showPopup('London', '$450', 'goa.jpg')">
+                <a href="https://www.kashmirhills.com/" style="display: block;">
+                    <img src="kashmir.jpg" alt="Destination 4">
+                </a>
+                <h3>Kashmir Hills</h3>
+                <p>Location: Kashmir</p>
+            </div>
+            <div class="destination-card" onclick="showPopup('London', '$450', 'goa.jpg')">
+                <a href="https://www.holidify.com/places/darjeeling" style="display: block;">
+                    <img src="darjeeling.jpg" alt="Destination 4">
+                </a>
+                <h3>Darjeeling</h3>
+                <p>Location: West Bengal</p>
+            </div>
+
+        </div>
+        <div id="popup" class="popup">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <img id="popup-img" src="" alt="Destination">
+            <h3 id="popup-title"></h3>
+            <p id="popup-price"></p>
+        </div>
+
+    </section>
+    
+
+
+    <header>
+        <h1>Explore the World with Our Travel Packages</h1>
+    </header>
+
+    <section class="packages">
+        <div class="package">
+            <img src="goa - Copy.jpg" alt="PANAJI">
+            <div class="details">
+                <h3>PANAJI</h3>
+                <p>Panaji, often called the "Heart of Goa," is a vibrant city with beautiful beaches.</p>
+                <p>Price:  ₹8000</p>
+                <a href="#">Search Hotels</a>
+            </div>
+        </div>
+
+        <div class="package">
+            <img src="oty.webp" alt="OOTY">
+            <div class="details">
+                <h3>OOTY</h3>
+                <p>Ooty is a serene hill station in the Nilgiris, known for its lush landscapes and scenic beauty</p>
+                <p>Price:  ₹6500</p>
+                <a href="#">Search Hotels</a>
+            </div>
+        </div>
+
+        <div class="package">
+            <img src="delhi.jpeg" alt="New delhi">
+            <div class="details">
+                <h3>New Delhi</h3>
+                <p>New Delhi India's bustling capital, is a vibrant blend of historical landmarks and rich cultural heritage.</p>
+                <p>Price:  ₹10000</p>
+                <a href="#">Search Hotels</a>
+            </div>
+        </div>
+
+        <div class="package">
+            <img src="manali.jpg" alt="manali">
+            <div class="details">
+                <h3>MANALI</h3>
+                <p>Escape to the enchanting mountains, where snow-capped peaks</p>
+                <p>Price:  ₹9800</p>
+                <a href="#">Search Hotels</a>
+            </div>
+        </div>
+        <div class="package">
+            <img src="jaipur.jpg" alt="jaipur">
+            <div class="details">
+                <h3>JAIPUR</h3>
+                <p>Step into the Pink City, where royal palaces, majestic forts</p>
+                <p>Price:  ₹7300</p>
+                <a href="#">Search Hotels</a>
+            </div>
+        </div>
+
+        <div class="package">
+            <img src="rishikesh.jpeg" alt="RISHIKESH">
+            <div class="details">
+                <h3>RISHIKESH</h3>
+                <p> Find peace by the Ganges, where spirituality meets adventure</p>
+                <p>Price:  ₹6000</p>
+                <a href="#">Search Hotels</a>
+            </div>
+        </div>
+
+        <div class="package">
+            <img src="snow.jpeg" alt="SHIMLA">
+            <div class="details">
+                <h3>SHIMLA</h3>
+                <p> A charming hill station with colonial architecture and scenic landscapes.</p>
+                <p>Price:  ₹12000</p>
+                <a href="#">Search Hotels</a>
+            </div>
+        </div>
+
+        <div class="package">
+            <img src="SRINAGAR.jpg" alt="SRINAGAR">
+            <div class="details">
+                <h3>SRINAGAR</h3>
+                <p> A serene paradise known for its stunning Dal Lake and picturesque Himalayan views</p>
+                <p>Price:  ₹12000</p>
+                <a href="#">Search Hotels</a>
+            </div>
+        </div>
+    </section>
+
+
+
+   
+    <header>
+        <p>Discover Unique Hotels and Resorts in India</p>
+        
+    </header>
+    <section class="hotels" id="hotels">
+        <div class="hotel-card" data-hotel-id="hotel1">
+            <a href="https://www.online-reservations.com/?hotelid=2451595&msclkid=f39ebbcc4c4c152c55dfdcd26bd9524c" style="display: block;">
+            <img src="taj hotel.jpg" alt="Hotel 1">
+            </a>
+            <h3> Taj Hotel (Mumbai)</h3>
+            <p>Starting from ₹60,000/night</p>
+        </div>
+        <div class="hotel-card" data-hotel-id="hotel2">
+            <a href="https://www.thegranddragonladakh.com/" style="display: block;">
+            <img src="laddakh.jpg" alt="Hotel 2">
+            </a>
+            <h3>The Grand Dragon laddakh</h3>
+            <p>Starting from ₹12,000/night</p>
+        </div>
+        <div class="hotel-card" data-hotel-id="hotel2">
+            <a href="https://www.agoda.com/en-in/the-elgin-darjeeling-hotel/hotel/darjeeling-in.html?finalPriceView=1&isShowMobileAppPrice=false&cid=1914936&numberOfBedrooms=&familyMode=false&adults=1&children=0&rooms=1&maxRooms=0&checkIn=2024-11-5&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=-1&showReviewSubmissionEntry=false&currencyCode=INR&isFreeOccSearch=false&tag=2dd7085d-4d0d-49d4-954b-31e1ac022717&tspTypes=16&los=1&searchrequestid=4a06fef5-525c-4f66-a941-8ae9c0417af9&ds=DLrn%2BBqUTIHMfhv6" style="display: block;">
+            <img src="darjeeling hotel.jpg" alt="Hotel 2">
+            </a>
+            <h3>The Elgin Darjeeling</h3>
+            <p>Starting from ₹19,000/night</p>
+        </div>
+        <div class="hotel-card" data-hotel-id="hotel2">
+            <a href="https://www.bing.com/travel/hotels/detail?q=Radisson+Hotel+Jodhpur&id=YN4070x252443418390217928&hname=Radisson+Hotel+Jodhpur&loc=Jodhpur%2C+Rajasthan%2C+IN&displaytext=Jodhpur%2C+Rajasthan%2C+IN&lat=26.264397&lon=73.03119&cin=2024-12-15&cout=2024-12-16&guests=2A0C&age=&hotellistid=YN4070x252443418390217928&type=hotel&form=HTSEST&entrypoint=HTSEST" style="display: block;">
+            <img src="jodhpur.jpg" alt="Hotel 2">
+            </a>
+            <h3>Raddison Jodhpur</h3>
+            <p>Starting from ₹22,000/night</p>
+        </div>
+        <div class="hotel-card" data-hotel-id="hotel2">
+            <a href="https://www.goibibo.com/hotels/find-sem-hotels-in-Rishikesh/moustache-rishikesh/1546081981995124445/7941044871324342634/?hquery={%22d%22:{%22k%22:30,%22l%22:%202},%22r%22:%221-2-0%22,%22ibp%22:%22v3%22}&utm_source=bing&utm_medium=cpc&utm_campaign=Domestic_Hotel_Name_11&utm_content=Hotel_7941044871324342634_Rishikesh&utm_term=moustache%20hostel%20rishikesh&msclkid=b4354dd9660a16322f502ac717a49bca" style="display: block;">
+            <img src="rishikesh.jpg" alt="Hotel 2">
+            </a>
+            <h3>The Moustache Rishikesh</h3>
+            <p>Starting from ₹16,000/night</p>
+        </div>
+        <!-- Add more hotel cards as needed -->
+    </section>
+    <div class="button-container">
+    <a href="https://www.kayak.co.in/India-Hotels.112.dc.html?sck=s6il2exlsemy5ey1zxvoia&skipapp=true&tags=f%3A375" class="see-more-button">See More</a>
+    </div>
+
+    <!-- Popup Overlay -->
+    <div class="popup_overlay" id="popupOverlay">
+        <div class="popup_content">
+            <span class="close_btn" id="closeBtn">&times;</span>
+            <img id="popup_Image" src="" alt="Hotel Image">
+            <h3 id="popup_Title">Hotel Title</h3>
+            <p id="popup_Price">Price</p>
+            <p id="popup_Description">Description of the hotel</p>
+            <a id="visit_Button" href="https://www.online-reservations.com/?hotelid=2451595&msclkid=053780a3cf9f19f5a04ce7be1a79e4c2" target="_blank" class="visit-btn">Visit</a>
+        </div>
+    </div>
+    
+       
+
+
+    <!-- Popup Overlay -->
+    <div class="popup_overlay" id="popupOverlay">
+        <div class="popup_content">
+            <span class="close_btn" onclick="closePopup()">&times;</span>
+            <img id="popup_Image" src="" alt="Hotel Image">
+            <h3 id="popup_Title">Hotel Title</h3>
+            <p id="popup_Price">Price</p>
+            <p id="popup_Description">Description of the hotel</p>
+        </div>
+    </div>
+    
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 TravelBook. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="bp.js"></script>
+
+</body>
+
+</html>

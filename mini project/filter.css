@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.filter-container {
+    margin: 20px;
+}
+
+.destination-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 200px;
+}
+
+.destination {
+    display: none;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.destination a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Styles for each destination type */
+.beach {
+    background-color: #FFEBB7;
+    color: #FF8C00;
+}
+
+.mountains {
+    background-color: #D3E8E1;
+    color: #004D40;
+}
+
+.lakes {
+    background-color: #CDEBFF;
+    color: #007BFF;
+}
+
+.jungle {
+    background-color: #C8E6C9;
+    color: #2E7D32;
+}
+
+/* Hover effect for links */
+.destination a:hover {
+    color: #000;
+    text-decoration: underline;
+}

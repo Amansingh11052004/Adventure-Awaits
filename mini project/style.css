@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+header {
+    background-color: #2b6777;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+h1 {
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+section {
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 800px;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 1rem;
+}
+
+#expense-form {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+#expense-form input,
+#expense-form button {
+    padding: 0.8rem;
+    font-size: 1rem;
+}
+
+#expense-form button {
+    background-color: #52ab98;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#expense-form button:hover {
+    background-color: #417d72;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+table th,
+table td {
+    padding: 0.8rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f2f2f2;
+}
+
+table td button {
+    background-color: #ff6961;
+    color: white;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+table td button:hover {
+    background-color: #d14841;
+}
+
+.summary {
+    text-align: right;
+    margin-top: 1.5rem;
+}
+
+.summary p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2b6777;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traveler Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Traveler Expense Tracker</h1>
+        <p>Plan like a pro and manage your travel expenses effortlessly!</p>
+    </header>
+
+    <section class="planner">
+        <h2>Expense Planner</h2>
+        <form id="expense-form">
+            <input type="text" id="expense-name" placeholder="Expense Name" required>
+            <input type="number" id="expense-amount" placeholder="Amount" required>
+            <input type="date" id="expense-date" required>
+            <button type="submit">Add Expense</button>
+        </form>
+    </section>
+
+    <section class="expense-tracker">
+        <h2>Your Expenses</h2>
+        <table id="expense-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Expenses will appear here -->
+            </tbody>
+        </table>
+    </section>
+
+    <section class="summary">
+        <h2>Expense Summary</h2>
+        <p>Total Expenses: <span id="total-amount">0</span> </p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

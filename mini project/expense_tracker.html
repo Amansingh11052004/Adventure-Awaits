@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Expense Tracker</title>
+    <link rel="stylesheet" href="expense.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Track Your Travel Expenses</h1>
+        <p>Log your expenses while traveling and stay on budget. Keep track of every rupee spent and enjoy your journey stress-free.</p>
+    </header>
+
+    <div class="tracker-container">
+        <form class="expense-form" id="expenseForm">
+            <input type="text" id="expenseLocation" placeholder="Enter Expense" required>
+            <input type="date" id="expenseDate" required>
+            <input type="number" id="expenseAmount" placeholder="Amount (₹)" required min="1">
+            <button type="submit">Add Expense</button>
+        </form>
+
+        <div class="expense-list" id="expenseList"></div>
+        <div class="total-expense" id="totalExpense">Total Expense: ₹0</div>
+    </div>
+
+    <script src="expense.js"></script>
+</body>
+</html>

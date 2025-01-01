@@ -1,0 +1,688 @@
+/* RESET */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* HEADER */
+
+header,
+.header {
+    background-color: #5291de;
+    color: #fff;
+    padding: 1em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ 
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+}
+
+.logo-img {
+    height: 18px;  /* Adjust the size as per your requirement */
+    width: auto;
+    margin-right: 10px;  /* Adds some space between the logo and the text */
+}
+
+.logo a {
+    text-decoration: none;
+    color: rgb(219, 112, 59);
+    font-weight: bold;
+}
+
+.header nav a {
+    color: #e19806;
+    text-decoration: none;
+    margin-right: 30px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    
+}
+
+.nav-links,
+.header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 5px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+    margin-right: 50px;
+}
+
+.nav-links a:hover {
+    color: #f39c12;
+}
+
+
+/* AUTH BUTTONS */
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.auth-buttons button {
+    background-color: #f8c471;
+    color: #333;
+    border: none;
+    padding: 8px 15px;
+    font-size: 0.9em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.auth-buttons button:hover {
+    background-color: #f39c12;
+    text-decoration: none;
+}
+
+
+/* MODAL STYLES */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+   
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 5px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #333;
+}
+
+
+/* HERO SECTION */
+
+.hero {
+    text-align: center;
+    padding: 2em;
+    background: url('images/hero.jpg') no-repeat center center/cover;
+    color: #fff;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.hero button {
+    padding: 0.5em 1em;
+    border: none;
+    background-color: #ff4500;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+
+/* SEARCH SECTION */
+
+.search-section {
+    background-color: #f2f2f2;
+    padding: 2rem;
+    text-align: center;
+    
+}
+
+.search-container {
+    max-width: 1100px;
+    margin: auto;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.search-container h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 150px;
+}
+
+.form-row label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+form input[type="text"],
+form input[type="date"],
+form select {
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+form button {
+    padding: 0.8rem 2rem;
+    background-color: #004080;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #003366;
+}
+
+
+/* DESTINATIONS SECTION */
+
+.destinations {
+    padding: 2em;
+    background-color: #f4f4f4;
+}
+
+.destination-list {
+    display: flex;
+    gap: 1em;
+}
+
+.destination-card {
+    background-color: #fff;
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: calc(33.333% - 1em);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+
+
+.services,
+.footer {
+    padding: 2em;
+    text-align: center;
+    background-color: #1a1a2e;
+    color: #fff;
+}
+
+.footer p {
+    margin-top: 1em;
+}
+
+.social-icons {
+    margin-top: 0.5em;
+
+}
+
+
+
+
+.featured-destinations {
+    text-align: center;
+    padding: 20px;
+}
+
+.destinations-slider {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.destinations {
+    display: flex;
+    transition: transform 0.4s ease;
+}
+
+.destination-card {
+    min-width: 100%;
+    cursor: pointer;
+    text-align: center;
+}
+
+.destination-card img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.destination-card:hover img {
+    transform: scale(1.05);
+}
+
+
+
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.popup img {
+    max-width: 80%;
+    border-radius: 10px;
+}
+
+.popup h3,
+.popup p {
+    color: #fff;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+body {
+    background-color: #5293d4;
+}
+
+
+
+
+.featured-destinations {
+    text-align: center;
+    padding: 20px;
+}
+
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+   
+}
+
+.destination-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destination-card img {
+    width: 200%;
+    height: 150px;
+    
+    object-fit: cover;
+   
+}
+
+.destination-card h3,
+.destination-card p {
+    margin: 10px 0;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.popup img {
+    max-width: 80%;
+    border-radius: 10px;
+}
+
+.popup h3,
+.popup p {
+    color: #fff;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* Header */
+
+header {
+    text-align: center;
+    background-color: #008080;
+    color: #fff;
+    padding: 2rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+
+
+
+.hotels {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 2rem;
+    
+}
+
+.hotel-card {
+    width: 250px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.hotel-card:hover {
+    transform: scale(1.05);
+}
+
+.hotel-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.hotel-card h3 {
+    font-size: 1.3rem;
+    color: #008080;
+    margin: 0.5rem 0;
+}
+
+.hotel-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+
+
+
+.popup_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.popup_content {
+    background: #fff;
+    padding: 2rem;
+    width: 400px;
+    max-width: 90%;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.popup_content img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.close_btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+}
+.nav-icon {
+    width: 25px; 
+    height: 25px; 
+    margin-right: 4px; 
+    vertical-align: middle; 
+}
+.see-more-button {
+    display: inline-block;        
+    padding: 10px 20px;
+    background-color: #007bff;     
+    color: #fff;                   
+    text-decoration: none;         
+    border-radius: 5px;           
+    font-size: 16px;              
+    font-weight: bold;            
+    transition: background-color 0.3s; 
+    
+    
+}
+
+.see-more-button:hover {
+    background-color: #0056b3;   
+     
+}
+.button-container {
+    display: flex;                 
+    justify-content: center;       
+    align-items: center;           
+    
+}
+.filter-container {
+    margin: 20px;
+}
+
+.destination-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 200px;
+}
+
+.destination {
+    display: none;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.destination a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.beach {
+    background-color: #FFEBB7;
+    color: #FF8C00;
+}
+
+.mountains {
+    background-color: #D3E8E1;
+    color: #004D40;
+}
+
+.lakes {
+    background-color: #CDEBFF;
+    color: #007BFF;
+}
+
+.jungle {
+    background-color: #C8E6C9;
+    color: #2E7D32;
+}
+
+
+.destination a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+.packages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.package {
+    position: relative;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: white;
+}
+
+.package img {
+    width: 100%;
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+.package:hover img {
+    transform: scale(1.1);
+}
+
+.details {
+    padding: 15px;
+    text-align: center;
+}
+
+.details h3 {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+}
+
+.details p {
+    color: #666;
+    margin: 0 0 15px;
+}
+
+.details a {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.details a:hover {
+    background-color: #45a049;
+}
+

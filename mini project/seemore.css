@@ -1,0 +1,45 @@
+/* General Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+/* Content Container */
+
+.content-container {
+    text-align: center;
+    max-width: 600px;
+    padding: 2rem;
+}
+
+
+/* See More Button */
+
+.see-more-btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.8rem 2rem;
+    background-color: #008080;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.see-more-btn:hover {
+    background-color: #006666;
+    transform: scale(1.05);
+}
